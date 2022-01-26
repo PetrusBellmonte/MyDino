@@ -6,9 +6,9 @@ After=multi-user.target
 Type=simple
 Restart=always
 RestartSec=3
-WorkingDirectory=/home/pi/pystuff
+WorkingDirectory=/home/pi/MyDino
 User=root
-Environment=PYTHONPATH=/home/pi/pystuff
+Environment=PYTHONPATH=/home/pi/MyDino
 ExecStart=/usr/bin/python ./controller.py
 
 [Install]
