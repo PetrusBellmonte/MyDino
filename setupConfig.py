@@ -81,8 +81,8 @@ def getValue(msg='', cast=None, default=None, options=None, displayDefault=True,
 if __name__ == '__main__':
     # Get Websockets
     print('The Dino still needs some Information to phone Home.... Can you help them?')
-    Config['websocket']['uri'] = getValue(msg='What\'s their home-number? (URI)', casesensitive=True).strip()
-    Config['websocket']['key'] = getValue(msg='What\'s the super secret code? (KEY)', casesensitive=True).strip()
+    Config['websocket']['URI'] = getValue(msg='What\'s their home-number? (URI)', casesensitive=True).strip()
+    Config['websocket']['KEY'] = getValue(msg='What\'s the super secret code? (KEY)', casesensitive=True).strip()
     Config['websocket']['name'] = getValue(msg='What\'s your Dino-name?', casesensitive=True).strip()
     print()
 

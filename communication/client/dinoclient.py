@@ -69,7 +69,7 @@ class Dinoclient:
     async def run_client(self, catchCancle=True):
         print('Attempt Connect')
         try:
-            self.dinosocket = await websockets.connect(self.uri, subprotocols=['dino', self.key], )
+            self.dinosocket = await websockets.connect(self.uri, subprotocols=['dino', self.key])
         except (websockets.InvalidStatusCode, websockets.ConnectionClosedError, TimeoutError):
             print('No Connection possible')
             return
