@@ -1,0 +1,23 @@
+buttons:
+  holdtime: 0.5
+  minus: 4
+  mode: 15
+  plus: 17
+  power: 14
+  superstatetime: 3
+lightcontroll:
+  brightness: 1.0
+  currentmode:
+    params:
+      color:
+        defaultValue: '#ffffff'
+        value: '#ffffff'
+    type: uniColor
+  pixels: 58
+  port: <TODO Port of the Data-pin DEFAULT 18>
+  state: true
+  superstate: true
+websocket:
+  KEY: <KEY for the Server>
+  URI: <URI>
+  name: MyDino

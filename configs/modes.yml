@@ -1,0 +1,15 @@
+- params:
+    circletime:
+      defaultValue: 10
+      value: 5
+    color:
+      defaultValue: '#ffffff'
+      value: '#ffffff'
+  type: pulse
+- params:
+    color:
+      defaultValue: '#ffffff'
+      value: '#ffffff'
+  type: uniColor
+- params: { }
+  type: rainbow_cycle

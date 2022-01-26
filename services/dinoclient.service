@@ -1,0 +1,15 @@
+[Unit]
+Description=Runs the dino client
+After=multi-user.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=3
+WorkingDirectory=/home/pi/pystuff
+User=root
+Environment=PYTHONPATH=/home/pi/pystuff
+ExecStart=/usr/bin/python ./controller.py
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,15 @@
+[Unit]
+Description=Runs a server for inter-dino-app communication
+After=multi-user.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=3
+WorkingDirectory=/home/pi/pystuff
+User=pi
+Environment=PYTHONPATH=/home/pi/pystuff
+ExecStart=/home/pi/pystuff/venv/bin/python ./communication/server/dinoserver.py
+
+[Install]
+WantedBy=multi-user.target
