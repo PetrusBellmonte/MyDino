@@ -153,6 +153,8 @@ async def handler(websocket: websockets.WebSocketServerProtocol, path):
             else:
                 await notify(message, source=websocket, address=address)
                 #await websocket.send(json.dumps(error('Unknown Action')))
+    except websockets.ConnectionClosedError:
+        pass
     finally:
         del CONNECTIONS[websocket]
     print(f'Handleing {len(CONNECTIONS)} connections after {websocket} left.')
