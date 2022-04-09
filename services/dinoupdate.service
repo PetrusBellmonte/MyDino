@@ -1,0 +1,14 @@
+[Unit]
+Description=Runs the dino client
+After=multi-user.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=3600
+WorkingDirectory=/home/pi/MyDino
+User=root
+ExecStart=updater.sh
+
+[Install]
+WantedBy=multi-user.target

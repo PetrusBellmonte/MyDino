@@ -33,7 +33,11 @@ then
 fi
 
 # Activate Dino
+chmod +x updater.sh
 cp services/dinoclient.service /etc/systemd/system
+cp services/dinoupdate.service /etc/systemd/system
 systemctl daemon-reload
+systemctl enable dinoupdate.service
+systemctl start dinoupdate.service
 systemctl enable dinoclient.service
 systemctl start dinoclient.service
