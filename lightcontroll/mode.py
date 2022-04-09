@@ -1,5 +1,6 @@
 from typing import Dict, Union
 import threading
+import copy
 
 
 class Parameter:
@@ -121,7 +122,7 @@ def register_as_mode(idName, name, description='', params: Dict[Union[str, int],
     def deco(func):
         if idName in Mode.MODES:
             raise Exception(f'Module with name {idName} already exists.')
-        Mode.MODES[idName] = lambda *args: FuncMode(idName, name, description,params if params is None else params.copy(), exec_func=func)
+        Mode.MODES[idName] = lambda *args: FuncMode(idName, name, description,copy.deepcopy(params if params is None else params), exec_func=func)
         return func
 
     return deco
